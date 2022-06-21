@@ -34,8 +34,8 @@ var tooltip = d3.select("#illinois-map")
   .attr('id', 'tooltip')
 
 
-var colors = ['#F4AC33', '#004A8F', '#6BA292', '#228B22', '#D5563A', "#707c9c", "#654F6F", '#F4AC33', '#004A8F', '#228B22', '#D5563A', '#6BA292', "#707c9c"]
-var whiteDists = ['2', '5', '7', '9', '4', '10']
+var colors = ['#F4AC33', '#56a9de', '#6BA292', '#ed6a5a', '#654F6F', "#707c9c", "#654F6F", '#F4AC33', '#004A8F', '#228B22', '#D5563A', '#6BA292', "#707c9c"]
+var whiteDists = ['2', '5']
 
 function tooltipText(county, oldDist, newDist) {
   if (oldDist.includes('&')) {
@@ -43,7 +43,7 @@ function tooltipText(county, oldDist, newDist) {
   } else {
     var dWord = 'District'
   }
-  return `<strong>${county} County</strong> is currently in <strong>${dWord} ${oldDist}</strong>.<br/><br/>Under the proposed legislation, it will be in <strong>District ${newDist}</strong>.`
+  return `<strong>${county} County</strong> used to be in <strong>${dWord} ${oldDist}</strong>.<br/><br/>After redistricting, it is in <strong>District ${newDist}</strong>.`
 }
 
 function mouseOver(d) {
@@ -236,7 +236,7 @@ d3.json("illinois-complete.json")
       })
       .attr("dy", (d) => {
         if (d.properties.OLDDIST === "3") {
-          return "-.35em"
+          return "-.05em"
         } else if (d.properties.OLDDIST === "4") {
           return '0em'
         } else {
