@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cannabis 2020 referendum map</title>
+  <script type="text/javascript" src="https://assets.law360news.com/1365000/1365370/d3.v5.min.js"></script>
+  <script type="text/javascript" src="https://assets.law360news.com/1365000/1365370/textures.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+  </link>
+  <link rel="stylesheet" href="selectize.css">
+  </link>
+  <link rel="stylesheet" href="https://static.law360news.com/201909/assets/responsive-next-66b108f72cb903e08921374a58018b9b4946c2dfc824bb241a6b6f800c3e0ca4.css">
+  </link>
+</head>
+
+<body>
+  <div id="article">
+    <div class="d3-container" id="illinois-map">
+      <div class="top-bar"></div>
+      <span class='hed'>New Illinois Judicial Districts</span>
+      <p class="dek">Control of the Illinois Supreme Court will be determined in this fall's election, the first with new district maps since 1964. The changes led to two contested races this cycle.</p>
+      <select id="select-county" placeholder="Select a county..."></select>
+      <div class="chart" id="illinois-old">
+        <strong>1964-2021</strong>
+      </div>
+      <div class="chart" id="illinois-new">
+        <strong>Current</strong>
+      </div>
+
+      <span id="bottom"><span id="source">Source: Illinois Supreme Court</span><span id="gfx-logo"><img src="Law360@2x.png" style="width:100%;" /></span></span>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js" defer></script>
+    <script type="text/javascript" src="js-select-gocubsgo.js" async defer></script>
+  </div>
+</body>
+
+</html>
